@@ -29,6 +29,7 @@ class AdAccountsController < ApplicationController
   # POST /ad_accounts.json
   def create
     @ad_account = AdAccount.new(ad_account_params)
+    @ad_account.user = current_user
 
     respond_to do |format|
       if @ad_account.save
