@@ -1,0 +1,33 @@
+<h1>Listing ad_accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Source</th>
+      <th>Oauth token</th>
+      <th>Active</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_accounts.each do |ad_account| %>
+      <tr>
+        <td><%= ad_account.name %></td>
+        <td><%= ad_account.source_id %></td>
+        <td><%= ad_account.oauth_token %></td>
+        <td><%= ad_account.active %></td>
+        <td><%= ad_account.user %></td>
+        <td><%= link_to 'Show', ad_account %></td>
+        <td><%= link_to 'Edit', edit_ad_account_path(ad_account) %></td>
+        <td><%= link_to 'Destroy', ad_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ad account', new_ad_account_path %>

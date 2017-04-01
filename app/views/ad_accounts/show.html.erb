@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad_account.name %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @ad_account.source_id %>
+</p>
+
+<p>
+  <strong>Oauth token:</strong>
+  <%= @ad_account.oauth_token %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @ad_account.active %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ad_account.user %>
+</p>
+
+<%= link_to 'Edit', edit_ad_account_path(@ad_account) %> |
+<%= link_to 'Back', ad_accounts_path %>
